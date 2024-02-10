@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Page Fernando</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <a href="#" class="logo"><img src="./img/Logo - Netflix.png" alt="logo netflix"></a>
+            <ul class="navigation">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Series</a></li>
+                <li><a href="#">Peliculas</a></li>
+                <li><a href="#">Favoritos</a></li>
+                <li><a href="#">Ver Mas Tarde</a></li>
+
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button class="btbuscar"><span class="material-icons">search</span></button>
+            </div>
+        </header>
+        <section class="banner">
+            <img src="./img/The good doctor.jpg" alt="personaje" class="bg"/>
+            <span class="sombraImg"></span>
+            <div class="content">
+                <img src="./img/download-removebg-preview (4).png" alt="" class="movieTitle" width="60">
+            <h4>
+                <span>2024</span>
+                <span><i>+17</i></span>
+                <span>7 Temporadas</span>
+                <span>Serie</span>
+            </h4>
+            <p>
+                The Good Doctor se centra en un joven y brillante cirujano que padece el síndrome de Savant. Poco se sabe de este "síndrome del sabio" además de que aquellos que lo sufren tienen una memoria prodigiosa y muy especial. Shaun, no tuvo una infancia fácil, para convertirse en un médico con talento primero debía enfrentarse a los problemas.
+            </p>
+            <div class="buttons">
+                <a href="#">Ver</a>
+                <a href="#">Mi Lista</a>
+            </div>
+            </div>
+            <a href="#" class="play" onclick="toggleVideo();"><img src="./img/Reproductor - Video.png" alt="trailer">Trailer</a>
+        </section>
+        <section class="trailer">
+            <video src="./img/THE GOOD DOCTOR - TRÁILER PRIMERA TEMPORADA.mp4" controls="true"></video>
+            <img src="./img/Close.png" alt="" class="close" onclick="toggleVideo();">
+
+        </section>
+    </main>
+    <script>
+        function toggleVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
